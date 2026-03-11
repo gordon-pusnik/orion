@@ -4,6 +4,7 @@
 
 build/
 Build/
+Debug/
 bin/
 dist/
 out/
@@ -42,6 +43,27 @@ compile_commands.json
 *.ipch
 *.tlog
 *.ilk
+
+####################################
+# Visual Studio (Orion/Windows)
+####################################
+
+Orion/Windows/.vs/
+Orion/Windows/*.sln
+Orion/Windows/*.vcxproj
+Orion/Windows/*.vcxproj.user
+Orion/Windows/*.vcxproj.filters
+Orion/Windows/*.suo
+Orion/Windows/*.user
+Orion/Windows/*.userosscache
+Orion/Windows/*.sln.docstates
+Orion/Windows/*.pdb
+Orion/Windows/*.ipch
+Orion/Windows/*.tlog
+Orion/Windows/*.ilk
+Orion/Windows/.vsconfig
+Orion/Windows/Debug/
+Orion/Windows/x64/
 
 ####################################
 # Xcode / macOS / iOS
