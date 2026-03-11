@@ -259,8 +259,6 @@ Orion was designed to explore **high-performance cross-platform graphics archite
 
 Gordon Pusnik
 
-Orion demonstrates the design of a portable real-time 3D engine capable of powering space simulation environments across desktop and mobile platforms.
-
 ---
 
 # License
