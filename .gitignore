@@ -5,7 +5,6 @@
 build/
 Build/
 bin/
-lib/
 dist/
 out/
 *.o
