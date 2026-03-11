@@ -1,41 +1,109 @@
-# Prerequisites
-*.d
+####################################
+# General Build Artifacts
+####################################
 
-# Compiled Object files
-*.slo
-*.lo
+build/
+Build/
+bin/
+lib/
+dist/
+out/
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
 *.so
-*.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
+*.dylib
 *.a
 *.lib
-
-# Executables
 *.exe
-*.out
 *.app
 
-# debug information files
-*.dwo
+####################################
+# CMake
+####################################
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+####################################
+# Visual Studio (Windows)
+####################################
+
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.pdb
+*.ipch
+*.tlog
+*.ilk
+
+####################################
+# Xcode / macOS / iOS
+####################################
+
+DerivedData/
+*.xcworkspace
+*.xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+build/
+
+####################################
+# Android / Gradle
+####################################
+
+.gradle/
+local.properties
+*.apk
+*.aab
+*.ap_
+*.dex
+captures/
+.externalNativeBuild/
+.cxx/
+build/
+
+####################################
+# Android Studio / IntelliJ
+####################################
+
+.idea/
+*.iml
+
+####################################
+# OpenGL / Shader Intermediate
+####################################
+
+*.spv
+*.glslc
+
+####################################
+# Logs
+####################################
+
+*.log
+
+####################################
+# OS Files
+####################################
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+####################################
+# Temporary Files
+####################################
+
+*.tmp
+*.temp
+*.swp
+*.bak
