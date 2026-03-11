@@ -1,0 +1,16 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 03.01.2010 06:23:54
+
+newmtl _Anna_V_1stwire_134006006
+	Ns 0.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.525500 0.023500 0.023500
+	Kd 0.525500 0.023500 0.023500
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka Models/anna-v.png
+	map_Kd Models/anna-v.png
