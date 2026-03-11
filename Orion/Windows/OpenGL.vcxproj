@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{80A43668-580D-4B7C-B95D-1D4B5F63B8FF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./;../../OrionEngine/Source;../../Lib/glew-2.2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)OpenGL.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)OpenGL.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>../../Lib/glew-2.2.0/lib/Release/Win32</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)OpenGL.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\OrionEngine\Source\AnnaV.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\AssetManager.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Button.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Camera.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\CobraFighter.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\CobraInterceptor.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\CumulativeDistributionFunction.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Engine.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Eris.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\FastMath.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\FwdRevController.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GalaxyEngine.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Game.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GeometryManager.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Ghoul.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLBaseEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLBatch.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLCoronaEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLCubemapEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLFrameBuffer.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLMultiTexturePlanetEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLNebulaEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLParticleEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLPointSpriteEngineEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLPointSpriteReticleEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLPointSpriteStarEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLPointSpriteStarEffect2.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLTextureEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLTexturePointLightDiffuseEffect.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\GLUtils.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Hud.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Imposter.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\KanaraInterceptor.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Kono.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Manager.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\MapScene.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Matrix4.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\ModelOBJ.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\MultitexPlanet.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Nebula.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Noise3DTexture.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\ObjLoader.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\PitchYawController.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Planet.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\adler32.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\crc32.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\infblock.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\infcodes.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\inffast.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\inflate.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\inftrees.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\infutil.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\png.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngerror.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pnggccrd.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngget.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\PngLoader.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngmem.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngpread.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngread.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngrio.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngrtran.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngrutil.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngset.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngtrans.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\pngvcrd.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\png\zutil.c" />
+    <ClCompile Include="..\..\OrionEngine\Source\Quaternion.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Random.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Renderer.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Reticle.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\RollController.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Scene.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\SceneManager.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\ShaderManager.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\ShaderUtils.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Ship.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\ShipController.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Skybox.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\SlidePanel.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\SpaceScene.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\SpecRend.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Star.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Starfield.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Station.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Texture.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\TextureManager.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\TimeManager.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Utils.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Vector2.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Vector3.cpp" />
+    <ClCompile Include="..\..\OrionEngine\Source\Vector4.cpp" />
+    <ClCompile Include="GameBase.cpp" />
+    <ClCompile Include="GLFont.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\OrionEngine\Source\AnnaV.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\AssetManager.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Button.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Camera.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\CobraFighter.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\CobraInterceptor.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Constants.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\CumulativeDistributionFunction.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Defines.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Engine.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Entity.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Eris.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\FastMath.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\FwdRevController.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GalaxyConstants.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GalaxyEngine.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Game.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GeometryManager.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Ghoul.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLBaseEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLBatch.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLCoronaEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLCubemapEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLFrameBuffer.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLMultiTexturePlanetEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLNebulaEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLParticleEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLPointSpriteEngineEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLPointSpriteReticleEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLPointSpriteStarEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLPointSpriteStarEffect2.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLTextureEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLTexturePointLightDiffuseEffect.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\GLUtils.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Hud.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Imposter.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\KanaraInterceptor.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Kono.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Manager.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\MapScene.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Matrix4.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\ModelOBJ.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\MultitexPlanet.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Nebula.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Noise3DTexture.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\ObjLoader.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\PitchYawController.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Planet.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\infblock.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\infcodes.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\inffast.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\inffixed.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\inftrees.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\infutil.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\png.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\pngasmrd.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\pngconf.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\PngLoader.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\zconf.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\zlib.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\png\zutil.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Quaternion.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Random.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Renderer.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Reticle.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\RollController.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Scene.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\SceneManager.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\ShaderManager.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\ShaderUtils.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Ship.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\ShipController.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Skybox.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\SlidePanel.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\SpaceScene.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\SpecRend.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Star.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Starfield.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Station.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Texture.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\TextureManager.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\TimeManager.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Utils.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\VBitMap.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Vector2.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Vector3.h" />
+    <ClInclude Include="..\..\OrionEngine\Source\Vector4.h" />
+    <ClInclude Include="GameBase.h" />
+    <ClInclude Include="GLFont.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
