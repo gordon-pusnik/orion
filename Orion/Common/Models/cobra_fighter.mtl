@@ -1,0 +1,16 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 21.01.2010 19:00:54
+
+newmtl wire_134110008
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5255 0.4314 0.0314
+	Kd 0.5255 0.4314 0.0314
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Models/cobra_fighter.png
+	map_Kd Models/cobra_fighter.png
