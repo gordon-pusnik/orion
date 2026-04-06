@@ -91,6 +91,9 @@ captures/
 .externalNativeBuild/
 .cxx/
 build/
+.project
+./settings
+./classpath
 
 ####################################
 # Android Studio / IntelliJ
