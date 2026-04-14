@@ -74,6 +74,7 @@ DerivedData/
 *.xcuserstate
 *.xccheckout
 *.xcscmblueprint
+xcuserdata/
 build/
 
 ####################################
