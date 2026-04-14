@@ -18,4 +18,6 @@
 @property (assign) CVDisplayLinkRef displayLink;
 @property (assign) NSAutoreleasePool *pool;
 
+- (NSSize)drawableSize;
+
 @end
