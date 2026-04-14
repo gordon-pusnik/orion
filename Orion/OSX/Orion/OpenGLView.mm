@@ -7,6 +7,7 @@
 //
 
 #import "OpenGLView.h"
+#include "Manager.h"
 
 @implementation OpenGLView
 
@@ -26,6 +27,8 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+
     NSLog(@"awakeFromNib");
     
     self.pool = nil;
@@ -34,34 +37,65 @@
     
     appDelegate.game = NULL;
     appDelegate.openGLView = self;
+    [self setWantsBestResolutionOpenGLSurface:YES];
     
     NSLog(@"Width: %f, height: %f\n", self.bounds.size.width, self.bounds.size.height);
-
-    [self prepareOpenGL];
-    
-    appDelegate.game= new Game;
-    appDelegate.game->init(self.bounds.size.width, self.bounds.size.height);
-    
-    // Activate the display link
-    CVDisplayLinkStart(_displayLink);
 }
 
 - (void)prepareOpenGL
 {
+    [super prepareOpenGL];
+
+    NSOpenGLContext *context = [self openGLContext];
+    [context makeCurrentContext];
+    [context update];
+
     // Synchronize buffer swaps with vertical refresh rate
     GLint swapInt = 1;
-    [[self openGLContext] setValues:&swapInt forParameter:NSOpenGLCPSwapInterval];
+    [context setValues:&swapInt forParameter:NSOpenGLCPSwapInterval];
 
-    // Create a display link capable of being used with all active displays
-    CVDisplayLinkCreateWithActiveCGDisplays(&_displayLink);
-    
-    // Set the renderer output callback function
-    CVDisplayLinkSetOutputCallback(_displayLink, &MyDisplayLinkCallback, self);
-    
-    // Set the display link for the current renderer
-    CGLContextObj cglContext = (CGLContextObj)[[self openGLContext] CGLContextObj];
+    if (!_displayLink) {
+        // Create a display link capable of being used with all active displays.
+        CVDisplayLinkCreateWithActiveCGDisplays(&_displayLink);
+        
+        // Set the renderer output callback function.
+        CVDisplayLinkSetOutputCallback(_displayLink, &MyDisplayLinkCallback, self);
+    }
+
+    // Set the display link for the current renderer.
+    CGLContextObj cglContext = (CGLContextObj)[context CGLContextObj];
     CGLPixelFormatObj cglPixelFormat = (CGLPixelFormatObj)[[self pixelFormat] CGLPixelFormatObj];
     CVDisplayLinkSetCurrentCGDisplayFromOpenGLContext(_displayLink, cglContext, cglPixelFormat);
+
+    if (!appDelegate.game) {
+        NSSize drawableSize = [self drawableSize];
+        NSLog(@"Drawable width: %f, height: %f\n", drawableSize.width, drawableSize.height);
+
+        appDelegate.game = new Game;
+        appDelegate.game->init(drawableSize.width, drawableSize.height);
+    }
+
+    CVDisplayLinkStart(_displayLink);
+}
+
+- (NSSize)drawableSize
+{
+    NSRect backingRect = [self convertRectToBacking:[self bounds]];
+    return backingRect.size;
+}
+
+- (void)reshape
+{
+    [super reshape];
+
+    NSOpenGLContext *context = [self openGLContext];
+    [context makeCurrentContext];
+    [context update];
+
+    if (appDelegate.game) {
+        NSSize drawableSize = [self drawableSize];
+        Manager::renderer()->setViewport(0, 0, drawableSize.width, drawableSize.height);
+    }
 }
 
 - (CVReturn)getFrameForTime:(const CVTimeStamp*)outputTime
