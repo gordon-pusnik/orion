@@ -9,7 +9,6 @@ bin/
 dist/
 out/
 *.o
-*.obj
 *.so
 *.dll
 *.dylib
