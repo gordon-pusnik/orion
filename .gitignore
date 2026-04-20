@@ -92,6 +92,7 @@ captures/
 .cxx/
 build/
 .project
+.settings/
 ./settings
 ./classpath
 
