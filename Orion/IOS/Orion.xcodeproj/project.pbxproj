@@ -875,7 +875,7 @@
 				);
 				INFOPLIST_FILE = "Orion/Orion-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.safarimontage.safarimontage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rythmiasoftware.orion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -896,7 +896,7 @@
 					"$(inherited)",
 					"-DGLES_SILENCE_DEPRECATION=1",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.safarimontage.safarimontage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rythmiasoftware.orion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
